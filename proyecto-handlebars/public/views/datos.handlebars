@@ -1,0 +1,25 @@
+<h1>Vista de Productos</h1>
+
+{{#if listExists}}
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Foto</th>
+    </tr>
+    {{#each productos}}
+    <tr>
+        <td>{{this.title}}</td>
+        <td>${{this.price}}</td>
+        <td>{{this.thumbnail}}</td>
+    </tr>
+    {{/each}}
+</table>
+{{else}}
+<h3>NO SE ENCONTRARON PRODUCTOS</h3>
+{{/if}}
+<button class="boton-enviar">
+    <a href="/">
+        Crear Producto
+    </a>
+</button>

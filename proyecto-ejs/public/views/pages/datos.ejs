@@ -1,0 +1,30 @@
+<h1>Vista de Productos</h1>
+
+<% if (listExists) { %>
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Foto</th>
+        </tr>
+        <% for (const producto of productos) { %>
+            <tr>
+                <td>
+                    <%=producto.title%>
+                </td>
+                <td>$<%=producto.price%>
+                </td>
+                <td>
+                    <img src=<%=producto.thumbnail%> width="42" height="42">
+                </td>
+            </tr>
+            <% } %>
+    </table>
+    <% } else { %>
+        <h3>NO SE ENCONTRARON PRODUCTOS</h3>
+        <% } %>
+            <button class="boton-enviar">
+                <a href="/">
+                    Crear Producto
+                </a>
+            </button>

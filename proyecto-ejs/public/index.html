@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Formulario de ingreso de Productos</title>
+</head>
+
+<body class="formulario">
+    <h2 class="titulo">Ingrese Producto</h2>
+    <form action="/api/productos" method="POST">
+        Nombre: <br><input type="text" name="title" class="input-form"><br>
+        Precio: <br><input type="text" name="price" class="input-form"><br>
+        Foto URL: <br><input type="text" name="thumbnail" class="input-form"><br>
+        <button class="boton-enviar">Enviar</button>
+    </form>
+    <button class="boton-enviar">
+        <a href="/api/productos">
+            Lista de Productos
+        </a>
+    </button>
+</body>
+
+</html>
